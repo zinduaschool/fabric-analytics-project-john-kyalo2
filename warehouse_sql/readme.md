@@ -1,10 +1,11 @@
-#Countries With Sales
+Countries With Sales
 
 SELECT DISTINCT co.CountryName
 FROM Sales s
 JOIN Customers cu ON s.CustomerID = cu.CustomerID
 JOIN Cities ci ON cu.CityID = ci.CityID
 JOIN Countries co ON ci.CountryID = co.CountryID;
+
 
 Employees Transaction Count
 
