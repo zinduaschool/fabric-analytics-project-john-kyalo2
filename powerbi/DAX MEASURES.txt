@@ -1,0 +1,15 @@
+DAX MEASURES USED IN MY GROCERY SALES REPORT
+
+Total Sales = SUM(Sales[Revenue])
+
+Total Quantity Sold = DISTINCTCOUNT(Sales[ProductID])
+
+Total Orders = DISTINCTCOUNT(Sales[SalesID])
+
+Products Purchased = DISTINCTCOUNTNOBLANK(Sales[ProductID])
+
+Customer Count = DISTINCTCOUNT(Customers[CustomerID])
+
+Avg Sales per transaction = AVERAGE(Sales[Revenue])
+
+Avg Revenue per customer = DIVIDE([Total Sales], DISTINCTCOUNT(Sales[CustomerID]))
